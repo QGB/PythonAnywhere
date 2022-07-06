@@ -88,6 +88,85 @@ Content-Length: 87
 < 
 * Connection #0 to host 127.0.0.1 left intact
 {"websocket":true,"cookie_needed":true,"origins":["*:*"],"entropy":2520243235425503629}
+=======================================================
+
+ 2022-07-06__16.46.18__.363 127.0.0.1:8000
+* Uses proxy env variable no_proxy == 'localhost,127.0.0.1,localaddress,.localdomain.com,/var/run/docker.sock'
+*   Trying 127.0.0.1:8000...
+* TCP_NODELAY set
+* Connected to 127.0.0.1 (127.0.0.1) port 8000 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*   CAfile: /etc/ssl/certs/ca-certificates.crt
+  CApath: /etc/ssl/certs
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES256-GCM-SHA384
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: C=GB; ST=Some-State; L=London; O=PythonAnywhere LLP; CN=PythonAnywhere
+*  start date: Sep 16 16:59:49 2014 GMT
+*  expire date: Jun 30 16:59:49 2288 GMT
+*  issuer: C=GB; ST=Some-State; L=London; O=PythonAnywhere LLP; CN=PythonAnywhere
+*  SSL certificate verify result: self signed certificate (18), continuing anyway.
+> GET /sj/info HTTP/1.1
+> Host:consoles-19.pythonanywhere.com
+> User-Agent: curl/7.68.0
+> Accept: */*
+> 
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 401 Unauthorized
+HTTP/1.1 401 Unauthorized
+< Server: openresty/1.15.8.3
+Server: openresty/1.15.8.3
+< Date: Wed, 06 Jul 2022 16:46:18 GMT
+Date: Wed, 06 Jul 2022 16:46:18 GMT
+< Content-Type: text/html
+Content-Type: text/html
+< Content-Length: 185
+Content-Length: 185
+< Connection: keep-alive
+Connection: keep-alive
+< WWW-Authenticate: Basic realm="Restricted"
+WWW-Authenticate: Basic realm="Restricted"
+
+< 
+<html>
+<head><title>401 Authorization Required</title></head>
+<body>
+<center><h1>401 Authorization Required</h1></center>
+<hr><center>openresty/1.15.8.3</center>
+</body>
+</html>
+* Connection #0 to host 127.0.0.1 left intact
+
+===============
+ 2022-07-06__16.46.18__.389 127.0.0.1:11300
+* Uses proxy env variable no_proxy == 'localhost,127.0.0.1,localaddress,.localdomain.com,/var/run/docker.sock'
+*   Trying 127.0.0.1:11300...
+* TCP_NODELAY set
+* Connected to 127.0.0.1 (127.0.0.1) port 11300 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*   CAfile: /etc/ssl/certs/ca-certificates.crt
+  CApath: /etc/ssl/certs
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+* error:1408F10B:SSL routines:ssl3_get_record:wrong version number
+* Closing connection 0
+curl: (35) error:1408F10B:SSL routines:ssl3_get_record:wrong version number
+
+
+
+
 ```
 
 
